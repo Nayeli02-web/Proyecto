@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "nombre": "Ramo de Rosas",
+        "precio": 11000,
+        "imagen": "./Imagenes/teamo.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Ramo de rosas con detalles ",
+        "precio": 11000,
+        "imagen": "./Imagenes/rosasrosadas.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Ramo para graduaciones",
+        "precio": 11500,
+        "imagen": "./Imagenes/rosadas.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Una rosa con un HotWeels",
+        "precio": 2000,
+        "imagen": "./Imagenes/hotweels2.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Una sola rosa",
+        "precio": 1500,
+        "imagen": "./Imagenes/unaroja.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Ramo de rosas y un girasol ",
+        "precio": 12500,
+        "imagen": "./Imagenes/jirasol.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Arreglo de rosas",
+        "precio": 13000,
+        "imagen": "./Imagenes/floresmoradas.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Ramo pequeño de rosas",
+        "precio":  8000,
+        "imagen": "./Imagenes/colores.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Ramo de rosas y un peluche",
+        "precio": 20000,
+        "imagen": "./Imagenes/florconstich.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Arreglo con pequeños detalles",
+        "precio": 13000,
+        "imagen": "./Imagenes/cajitaconrosasrosadas.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Arreglo de rosas con diferentes chocolates",
+        "precio": 10000,
+        "imagen": "./Imagenes/rosasdecoradas.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Arreglo de rosas con chocolates Ferrero Rocher",
+        "precio": 16000,
+        "imagen": "./Imagenes/caja.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Arreglo de rosas con detalles",
+        "precio": 11000,
+        "imagen": "./Imagenes/rosada.jpg"
+    }
+]
