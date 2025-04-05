@@ -16,17 +16,59 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="css/detalles.css">
+        <link rel="stylesheet" href="css/Producto.css">
+        
     </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand ms-4" href="#"> 
+                        <img src="Imagenes/Flor Eterna Hilda 1.png" alt="Flor Eterna Hilda">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Productos.html">Productos y Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Preguntas Frecuentes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Autor.html">Acerca De</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
-        <script src="js/detalles.js"></script>
-        <footer>
-            <!-- place footer here -->
+
+        <main class="container my-5">
+            <div id="detalle-producto" class="row justify-content-center"></div>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-container">
+                <span class="footer-text">SÍGUENOS EN</span>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61559473898472" target="_blank">
+                        <img src="Imagenes/facebook.png" alt="Facebook" style="width: 40px; height: 40px; border-radius: 50%;">
+                    </a>
+                </div>
+                <span class="footer-text">ENVÍANOS UN WHATSAPP</span>
+                <div class="social-icons">
+                    <a href="https://wa.me/50686286611" target="_blank">
+                    <img src="Imagenes/whatsapp.png" alt="WhatsApp" style="width: 40px; height: 40px; border-radius: 50%;">
+                </a>
+                </div>
+                
+            </div>
+            <p class="footer-rights">© 2025, Derechos Reservados por: <br> Nayeli Arrieta Castro</p>
         </footer>
+
+        <script src="js/detalleProducto.js"></script>
+
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
