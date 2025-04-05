@@ -147,3 +147,15 @@
         font-size: 12px;
     }
 }
+
+/*Boton volver detalle*/
+.btnVolver{
+    background-color: #e28b8b;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none; 
+    display: inline-block;
+}
