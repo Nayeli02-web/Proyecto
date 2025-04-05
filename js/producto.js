@@ -14,10 +14,14 @@ function mostrarProductos(productos) {
                 <img src="${producto.imagen}" alt="${producto.nombre}">
                 <h2>${producto.nombre}</h2>
                 <p><strong>Precio:</strong> ₡${producto.precio}</p>
-                <button class="btn-comprar">Ver Producto</button>
+                <button class="btn-comprar" onclick="verProducto(${producto.id})">Ver Producto</button>
             </div>
         `;
         contenedor.innerHTML += productoHTML;
     });
+}
+
+function verProducto(id) {
+    window.location.href = `Detalles.html?id=${id}`;
 }
 
