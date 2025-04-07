@@ -5,45 +5,45 @@ body {
 }
 /*Nav*/
 .navbar {
-    background-color: #ffffff;
-    padding: 10px 0; 
-}
-
-.navbar-brand {
-    margin-left: 30px;
+    background-color: #FCEFF3;
+    border-bottom: 1px solid #F9D6E5;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
 .navbar-brand img {
-    max-height: 90px; 
+    height: 48px;
     width: auto;
-    display: block;
 }
 
 .navbar-nav .nav-link {
-    color: black;
-    padding: 10px 15px;
-    transition: color 0.3s ease;
-    font-size: 14px; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-    font-family: "Arial", sans-serif; 
+    color: #A12439;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+    padding: 6px 12px;
+    border-radius: 6px;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #AF5693;
+    background-color: #f8c3d3;
+    color: #84212F;
+    text-decoration: none;
 }
-
 @media (max-width: 991px) {
     .navbar-brand {
         margin-left: 10px; 
     }
     .navbar-nav {
         text-align: center;
-        background-color: white;
+        background-color:  #FCEFF3;
         padding: 10px 0;
     }
 }
-
 /*información*/
 .container {
     max-width: 800px;
@@ -81,47 +81,40 @@ h1 {
 
 /*Footer*/
 .footer {
-    background-color: black;
-    padding: 15px 0;
+    background-color: #FCEFF3;
+    padding: 2rem 1rem;
     text-align: center;
+    border-top: 1px solid #eee;
 }
 
 .footer-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.8rem;
     align-items: center;
-    gap: 15px;
 }
 
 .footer-text {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 0.95rem;
+    color: #A12439;
 }
 
-.social-icons a img,
-.whatsapp-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 5px;
-    transition: transform 0.3s ease;
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    margin: 0 6px;
+    transition: transform 0.2s;
 }
 
-.social-icons a img:hover,
-.whatsapp-icon:hover {
+.social-icons img:hover {
     transform: scale(1.1);
 }
 
 .footer-rights {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #A12439;
 }
-
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
