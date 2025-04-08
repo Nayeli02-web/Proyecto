@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar {
     background-color: #FCEFF3;
     border-bottom: 1px solid #F9D6E5;
@@ -13,11 +14,15 @@
     width: auto;
 }
 
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
 .navbar-nav .nav-link {
     color: #A12439;
     font-weight: 500;
     font-size: 15px;
-    margin: 0 10px;
     transition: all 0.3s ease-in-out;
     padding: 6px 12px;
     border-radius: 6px;
@@ -28,14 +33,37 @@
     color: #84212F;
     text-decoration: none;
 }
+
+.icono-navbar {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.icono-navbar:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 991px) {
-    .navbar-brand {
-        margin-left: 10px; 
+    .iconos-navbar {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
     }
+
     .navbar-nav {
-        text-align: center;
-        background-color:  #FCEFF3;
-        padding: 10px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-fluid {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
