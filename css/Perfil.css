@@ -95,7 +95,20 @@ body {
     font-size: 24px;
     color: #333;
 }
-  
+
+.contenedor button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #e28b8b;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
 /*Footer*/
 .footer {
