@@ -47,6 +47,8 @@ function registrar() {
   
     if (storedUser.email === email && storedUser.password === password) {
       alert("¡Inicio de sesión exitoso!");
+      localStorage.setItem("sesionIniciada", "true");
+      window.location.href = "perfil.html";
     } else {
       error.textContent = "Email o contraseña incorrectos.";
     }
