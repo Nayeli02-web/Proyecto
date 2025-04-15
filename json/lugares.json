@@ -1,0 +1,27 @@
+{
+    "San José": {
+      "Central": ["Carmen", "Merced", "Hospital", "Catedral", "Zapote", "San Francisco de Dos Ríos", "Uruca", "Mata Redonda", "Pavas", "Hatillo", "San Sebastián"],
+      "Escazú": ["Escazú Centro", "San Rafael", "San Antonio"],
+      "Desamparados": ["Desamparados Centro", "San Miguel", "San Juan de Dios"]
+    },
+    "Alajuela": {
+      "Central": ["Alajuela Centro", "San José", "Carrizal", "San Antonio"],
+      "Grecia": ["Grecia Centro", "San Isidro", "San Roque"]
+    },
+    "Cartago": {
+      "Central": ["Oriental", "Occidental", "Carmen", "San Nicolás", "Aguacaliente"]
+    },
+    "Heredia": {
+      "Central": ["Heredia Centro", "Mercedes", "San Francisco", "Ulloa"]
+    },
+    "Guanacaste": {
+      "Liberia": ["Liberia Centro", "Cañas Dulces", "Mayorga"]
+    },
+    "Puntarenas": {
+      "Central": ["Puntarenas Centro", "Chacarita", "El Roble"]
+    },
+    "Limón": {
+      "Central": ["Limón Centro", "Valle La Estrella", "Río Blanco"]
+    }
+}
+  
