@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff; 
+    background-color: #fff6f7; 
 }
 
 
@@ -83,6 +83,7 @@ body {
     justify-content: flex-start; 
     gap: 10%; 
     padding: 50px;
+    color: #a12439;
 }
 
 .image-container {
