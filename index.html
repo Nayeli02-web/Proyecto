@@ -43,7 +43,7 @@
             
                     <div class="iconos-navbar d-flex align-items-center gap-3 me-3" id="navIcons">
                         <a href="Login.html"><img src="Imagenes/login.png" alt="Usuario" class="icono-navbar"></a>
-                        <a href="#"><img src="Imagenes/carrito.png" alt="Carrito" class="icono-navbar"></a>
+                        <a href="#" id="abrir-carrito"><img src="Imagenes/carrito.png" alt="Carrito" class="icono-navbar"></a>
                     </div>
             
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -130,7 +130,7 @@
                 <section class="container text-center py-5">
                     <h1 class="mb-4">Diseños Personalizados Realizados</h1>
             
-                    <div class="row g-2 justify-content-center">
+                    <div class="row g-3 justify-content-center">
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <img src="Imagenes/florconstich.jpg" class="img-fluid rounded shadow" alt="Imagen 1">
                         </div>
@@ -143,13 +143,40 @@
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <img src="Imagenes/colores.jpg" class="img-fluid rounded shadow" alt="Imagen 4">
                         </div>
-                    </div>
+                        
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <video class="video-custom rounded shadow" autoplay loop muted playsinline>
+                                <source src="Imagenes/video 2.mp4" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <video class="video-custom rounded shadow" autoplay loop muted playsinline>
+                                <source src="Imagenes/video.mp4" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                        </div>
+                    </div>                    
             
                     <a href="Productos.html" class="boton">Comprar</a>
                 </section>
             </div>
+
+            <section class="container my-5">
+                <h2 class="text-center mb-4">Encuéntranos Aquí</h2>
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15712.519887603235!2d-84.3135963!3d10.0979241!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA1JzUyLjUiTiA4NMKwMTgnNDkuMCJX!5e0!3m2!1ses-419!2scr!4v1713638896741!5m2!1ses-419!2scr" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
             
-           
         </main>
 
         <footer class="footer">

@@ -42,7 +42,7 @@
             
                     <div class="iconos-navbar d-flex align-items-center gap-3 me-3" id="navIcons">
                         <a href="Login.html"><img src="Imagenes/login.png" alt="Usuario" class="icono-navbar"></a>
-                        <a href="#"><img src="Imagenes/carrito.png" alt="Carrito" class="icono-navbar"></a>
+                        <a href="#" id="abrir-carrito"><img src="Imagenes/carrito.png" alt="Carrito" class="icono-navbar"></a>
                     </div>
                     
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -77,6 +77,19 @@
             <p class="footer-rights">© 2025, Derechos Reservados por: <br> Nayeli Arrieta Castro</p>
         </footer>
 
+        <div id="carrito-container" class="carrito-container" style="display: none;">
+            <div class="carrito-header">
+                <h3>Mi Carrito</h3>
+                <button onclick="cerrarCarrito()">✕</button>
+            </div>
+            <div id="carrito-items"></div>
+            <div class="carrito-footer">
+                <p>Total: <span id="carrito-total">₡0</span></p>
+                <button id="btnProcederCompra" class="btn btn-carrito w-100 mt-2">Proceder a la Compra</button>
+            </div>
+        </div>        
+
+        
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
