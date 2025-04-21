@@ -172,6 +172,15 @@ section p {
 }
 
 /* Diseño productos */
+.video-custom {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1; 
+    object-fit: cover;
+    display: block;
+}
+
+
 .diseno {
     background-color: #FFFFFF;
     padding-bottom: 2rem;
