@@ -49,6 +49,7 @@
         margin-top: 10px;
         justify-content: center;
         width: 100%;
+        padding: 20px;
     }
 
     .navbar-nav {
@@ -222,3 +223,32 @@
     margin-top: 10px;
     padding-top: 10px;
 }
+
+#carrito-container {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 350px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #fff6f7;
+    border-left: 2px solid #ccc;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    padding: 20px;
+}
+
+.btn-proceder-compra {
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-proceder-compra:hover {
+    background-color: #ec407a; 
+}
+

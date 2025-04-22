@@ -55,6 +55,7 @@ body {
         margin-top: 10px;
         justify-content: center;
         width: 100%;
+        padding: 20px;
     }
 
     .navbar-nav {
@@ -73,6 +74,7 @@ body {
     }
 }
 
+
 /*contenido*/
 .fondo-imagen {
     position: fixed;
@@ -87,7 +89,8 @@ body {
 
 .contenedor {
     background: rgba(255, 255, 255, 0.9);
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
     margin: 80px auto;
     padding: 30px;
     border-radius: 15px;
@@ -112,6 +115,20 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 20px;
+    }
+
+    .contenedor h4 {
+        font-size: 18px;
+    }
+
+    .contenedor button {
+        font-size: 14px;
+    }
 }
 
 /*Footer*/
@@ -179,15 +196,6 @@ input {
     border: 1px solid #ccc;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #fc6b4c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
 
 .error {
     color: red;
@@ -197,21 +205,178 @@ button {
 
 /*DatosCompra*/
 .modal {
+    display: none;
     position: fixed;
-    top: 0;
+    z-index: 999;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-    background: white;
-    padding: 2rem;
+.modal-contenido {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
     border-radius: 15px;
-    width: 300px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
 }
+
+.modal-contenido.exito {
+    text-align: center;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.card-container {
+    perspective: 1000px;
+    display: none;
+}
+
+.card {
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card.show-back {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+}
+
+.logo {
+    height: 40px;
+    float: right;
+}
+
+.formulario {
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#btnFinalizar {
+    margin-top: 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.magnetic-strip {
+    height: 40px;
+    background: black;
+    margin-bottom: 20px;
+}
+
+.cvv-box {
+    background: white;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    text-align: right;
+    border-radius: 5px;
+    float: right;
+}
+
+.logo-contenedor {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.logo-tarjeta {
+    height: 40px;
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 300px;
+        height: 180px;
+        font-size: 14px;
+    }
+
+    .formulario input {
+        font-size: 14px;
+    }
+
+    .cvv-box {
+        font-size: 14px;
+        width: 80px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}
+#carrito-container {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 350px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #fff6f7;
+    border-left: 2px solid #ccc;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    padding: 20px;
+}
+
+.btn-proceder-compra {
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-proceder-compra:hover {
+    background-color: #ec407a; 
+}
+
+

@@ -3,8 +3,9 @@ body {
     background-color: #fff6f7;
     margin: 0;
     padding: 0;
-  }
-  /* Navbar */
+}
+
+/* Navbar */
 .navbar {
     background-color: #FCEFF3;
     border-bottom: 1px solid #F9D6E5;
@@ -55,6 +56,7 @@ body {
         margin-top: 10px;
         justify-content: center;
         width: 100%;
+        padding: 20px;
     }
 
     .navbar-nav {
@@ -72,26 +74,27 @@ body {
         align-items: flex-start;
     }
 }
-  
-  /*Contenido*/
-  .faq-container {
+
+
+/*Contenido*/
+.faq-container {
     max-width: 700px;
     margin: 50px auto;
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     color: #a12439;
     margin-bottom: 30px;
-  }
-  
-  .faq-item {
+}
+
+.faq-item {
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
-  }
-  
-  .faq-question {
+}
+
+.faq-question {
     background: none;
     border: none;
     font-size: 18px;
@@ -101,15 +104,16 @@ body {
     padding: 15px 10px;
     color: #a12439;
     cursor: pointer;
-  }
-  
-  .faq-answer {
+}
+
+.faq-answer {
     display: none;
     padding: 0 10px 10px;
     color: #333;
     font-size: 16px;
-  }
-  /*Footer*/
+}
+
+/*Footer*/
 .footer {
     background-color: #FCEFF3;
     padding: 2rem 1rem;
@@ -145,6 +149,7 @@ body {
     font-size: 0.85rem;
     color: #A12439;
 }
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -161,4 +166,31 @@ body {
         margin-top: 10px;
         font-size: 12px;
     }
+}
+
+#carrito-container {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 350px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #fff6f7;
+    border-left: 2px solid #ccc;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    padding: 20px;
+}
+.btn-proceder-compra {
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-proceder-compra:hover {
+    background-color: #ec407a; 
 }

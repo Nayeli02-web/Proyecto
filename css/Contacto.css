@@ -3,8 +3,9 @@ body {
     background-color: #fff6f7;
 
 }
-  /* Navbar */
-  .navbar {
+
+/* Navbar */
+.navbar {
     background-color: #FCEFF3;
     border-bottom: 1px solid #F9D6E5;
     padding: 1rem 2rem;
@@ -54,6 +55,7 @@ body {
         margin-top: 10px;
         justify-content: center;
         width: 100%;
+        padding: 20px;
     }
 
     .navbar-nav {
@@ -64,7 +66,6 @@ body {
     .navbar-collapse {
         flex-direction: column;
         align-items: center;
-        
     }
 
     .container-fluid {
@@ -72,14 +73,15 @@ body {
         align-items: flex-start;
     }
 }
-  
+
 
 /*información*/
 .contenedor {
     background: rgba(255, 255, 255, 0.9);
-    width: 800px;
-    margin: 80px auto;
-    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
     color: #a12439;
@@ -89,22 +91,14 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-.card {
-    background: #f8c3d3;
-    padding: 20px;
-    border-radius: 25px;
-}
-.card h2 {
-    margin: 0 0 10px;
-}
-.icon {
-    width: 30px;
-    height: 30px;
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
 }
 
 
@@ -144,6 +138,7 @@ h1 {
     font-size: 0.85rem;
     color: #A12439;
 }
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -160,4 +155,32 @@ h1 {
         margin-top: 10px;
         font-size: 12px;
     }
+}
+
+#carrito-container {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 350px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #fff6f7;
+    border-left: 2px solid #ccc;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    padding: 20px;
+}
+
+.btn-proceder-compra {
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-proceder-compra:hover {
+    background-color: #ec407a;
 }

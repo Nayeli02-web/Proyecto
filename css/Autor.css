@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff6f7; 
+    background-color: #fff6f7;
 }
 
 
@@ -56,6 +56,7 @@ body {
         margin-top: 10px;
         justify-content: center;
         width: 100%;
+        padding: 20px;
     }
 
     .navbar-nav {
@@ -75,20 +76,23 @@ body {
 }
 
 
-/*Informacion del autor*/
+
+/* Informacion del autor */
 .container {
     font-family: 'Georgia', serif;
     display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    gap: 10%; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10%;
     padding: 50px;
     color: #a12439;
+    flex-wrap: wrap;
 }
 
 .image-container {
-    width: 500px;
-    height: auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .image-container img {
@@ -98,25 +102,59 @@ body {
 
 .text-container {
     flex: 1;
+    margin-top: 30px;
 }
 
 .text-container h1 {
-    margin-top: -20px;
-    margin-bottom: 30px; 
-    font-size: 2.5rem; 
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    text-align: center;
 }
 
 .text-container p {
     margin-bottom: 15px;
+    text-align: center;
+}
+
+.text-container a {
+    color: #a12439;
+    text-decoration: none;
 }
 
 .redes-sociales {
-    margin-top: 20px; 
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
 }
 
 .redes-sociales img {
-    margin-right: 10px; 
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
 }
+
+.redes-sociales img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .text-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+}
+
 
 /*Footer*/
 .footer {
@@ -154,6 +192,7 @@ body {
     font-size: 0.85rem;
     color: #A12439;
 }
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -170,4 +209,32 @@ body {
         margin-top: 10px;
         font-size: 12px;
     }
+}
+
+#carrito-container {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 350px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #fff6f7;
+    border-left: 2px solid #ccc;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    padding: 20px;
+}
+
+.btn-proceder-compra {
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-proceder-compra:hover {
+    background-color: #ec407a;
 }

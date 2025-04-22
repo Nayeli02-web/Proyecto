@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-   }
+}
 
 /* Navbar */
 .navbar {
@@ -54,6 +54,7 @@ body {
         margin-top: 10px;
         justify-content: center;
         width: 100%;
+        padding: 20px;
     }
 
     .navbar-nav {
@@ -80,63 +81,64 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    }
-    
-    .carousel {
+}
+
+.carousel {
     width: 100%;
     height: 100vh;
-    }
-    
-    .carousel-item {
+}
+
+.carousel-item {
     position: relative;
     width: 100%;
     height: 100vh;
-    }
-    
-    .carousel-item img {
+}
+
+.carousel-item img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
     filter: brightness(50%);
-    }
-    
-    .carousel-caption-custom {
+}
+
+.carousel-caption-custom {
     position: absolute;
     bottom: 5%;
     left: 5%;
     text-align: left;
     color: #e28b8b;
     font-family: 'Georgia', serif;
-    
-    }
-    
-    .carousel-caption-custom h1 {
+
+}
+
+.carousel-caption-custom h1 {
     margin: 0;
     font-size: 32px;
     font-weight: bold;
-    
-    }
-    
-    .carousel-caption-custom p {
+
+}
+
+.carousel-caption-custom p {
     margin: 5px 0 0;
     font-size: 20px;
     color: rgb(240, 235, 235);
-    }
-    
-    @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .carousel-caption-custom {
-    bottom: 3%;
-    left: 3%;
+        bottom: 3%;
+        left: 3%;
     }
-    
+
     .carousel-caption-custom h2 {
-    font-size: 24px;
+        font-size: 24px;
     }
-    
+
     .carousel-caption-custom p {
-    font-size: 16px;
+        font-size: 16px;
     }
-    }
+}
+
 /* Icon Section - limpio */
 .icon-circle {
     width: 60px;
@@ -147,7 +149,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .icon-circle img {
@@ -173,11 +175,14 @@ section p {
 
 /* Diseño productos */
 .video-custom {
+    max-width: 220px;
     width: 100%;
-    height: 100%;
-    aspect-ratio: 1/1; 
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    margin: 0 auto;
 }
 
 
@@ -194,7 +199,7 @@ section p {
 
 .diseno img {
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s;
     max-width: 220px;
     height: auto;
@@ -260,6 +265,7 @@ section p {
     font-size: 0.85rem;
     color: #A12439;
 }
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -276,16 +282,48 @@ section p {
         margin-top: 10px;
         font-size: 12px;
     }
+
+    .video-custom {
+        max-width: 300px;
+    }
 }
 
 /*Boton volver detalle*/
-.btnVolver{
+.btnVolver {
     background-color: #e28b8b;
     color: white;
     border: none;
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
-    text-decoration: none; 
+    text-decoration: none;
     display: inline-block;
+}
+
+#carrito-container {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    width: 350px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #fff6f7;
+    border-left: 2px solid #ccc;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    padding: 20px;
+}
+
+.btn-proceder-compra {
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-proceder-compra:hover {
+    background-color: #ec407a;
 }
