@@ -57,20 +57,57 @@
     <div class="contenedor">
         <div id="infoUsuario"></div>
         <div id="listaProductos"></div>
+        <button id="btnContinuar" class="btn-carrito">Continuar con la Compra</button>
     </div>
 
-    <button id="btnContinuar" class="btn-carrito">Continuar con la Compra</button>
+   
 
-    <div id="modalTarjeta" class="modal" style="display:none;">
-        <div class="modal-content">
-            <h3>Información de la Tarjeta</h3>
-            <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta" required><br>
-            <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" required><br>
-            <input type="text" id="fechaVencimiento" placeholder="MM/AA" required><br>
-            <input type="text" id="cvv" placeholder="CVV" required><br>
-            <button id="btnFinalizar" class="btn-carrito">Finalizar Compra</button>
-        </div>
+    
+<div id="modalTarjeta" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarModal" class="cerrar">&times;</span>
+       <div class="card-container">
+  
+          <div class="card" id="tarjeta">
+              <div class="card-front">
+                  <div class="logo-contenedor">
+                      <img id="logoMarca" src="" alt="Logo tarjeta" class="logo-tarjeta">
+                  </div>
+  
+                  <svg viewBox="0 0 500 280" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="500" height="280" rx="20" fill="#4e54c8" />
+                      <text id="svgNumero" x="30" y="150" fill="#fff" font-size="22" letter-spacing="4">#### #### ####
+                          ####</text>
+                      <text id="svgNombre" x="30" y="200" fill="#fff" font-size="18">NOMBRE COMPLETO</text>
+                      <text id="svgFecha" x="380" y="200" fill="#fff" font-size="18">MM/AA</text>
+                  </svg>
+              </div>
+  
+              <div class="card-back">
+                  <div class="magnetic-strip"></div>
+                  <div class="cvv-box" id="vistaCVV">CVV</div>
+              </div>
+          </div>
+  
+  
+          <div class="formulario">
+              <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" maxlength="19">
+              <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta">
+              <input type="text" id="fechaVencimiento" placeholder="MM/AA" maxlength="5">
+              <input type="text" id="cvv" placeholder="CVV" maxlength="3">
+              <button id="btnFinalizar">Finalizar Compra</button>
+          </div>
+      </div>
     </div>
+  </div>
+  
+  <div id="modalExito" class="modal">
+    <div class="modal-contenido exito">
+      <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Check" style="width: 80px;">
+      <h2>¡Compra realizada con éxito!</h2>
+    </div>
+  </div>
+  
 
     <script src="js/compra.js"></script>
 
