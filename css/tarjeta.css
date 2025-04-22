@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card-container {
+    perspective: 1000px;
+  }
+
+  .card {
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+
+  .card.show-back {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #222, #555);
+  }
+
+  .logo {
+    height: 40px;
+    float: right;
+  }
+
+  .card-number,
+  .card-name,
+  .card-exp {
+    margin: 20px 0;
+    letter-spacing: 2px;
+  }
+
+  .formulario {
+    margin-top: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  #btnFinalizar {
+    margin-top: 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .magnetic-strip {
+    height: 40px;
+    background: black;
+    margin-bottom: 20px;
+  }
+
+  .cvv-box {
+    background: white;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    text-align: right;
+    border-radius: 5px;
+    float: right;
+  }
