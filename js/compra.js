@@ -37,60 +37,139 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.getElementById("btnContinuar").addEventListener("click", () => {
-    document.getElementById("modalTarjeta").style.display = "flex";
+const vistaCVV = document.getElementById('vistaCVV');
+const svgNumero = document.getElementById('svgNumero');
+const svgNombre = document.getElementById('svgNombre');
+const svgFecha = document.getElementById('svgFecha');
+const logoMarca = document.getElementById('logoMarca');
+
+document.getElementById('numeroTarjeta').addEventListener('input', e => {
+    const valorFormateado = e.target.value
+        .replace(/\D/g, '')
+        .replace(/(.{4})/g, '$1 ')
+        .trim();
+
+    e.target.value = valorFormateado;
+    svgNumero.textContent = valorFormateado || '#### #### #### ####';
+
+    const numeroLimpio = valorFormateado.replace(/\s/g, '');
+
+    if (numeroLimpio.startsWith('4')) {
+        logoMarca.src = 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg';
+        logoMarca.style.display = 'block';
+    } else if (/^5[1-5]/.test(numeroLimpio)) {
+        logoMarca.src = 'https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png';
+        logoMarca.style.display = 'block';
+    } else if (/^3[47]/.test(numeroLimpio)) {
+        logoMarca.src = 'https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg';
+        logoMarca.style.display = 'block';
+    } else if (/^6(?:011|5)/.test(numeroLimpio)) {
+        logoMarca.src = 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Discover_Card_logo.svg';
+        logoMarca.style.display = 'block';
+    } else {
+        logoMarca.src = '';
+        logoMarca.style.display = 'none'; 
+    }
 });
 
-document.getElementById("btnFinalizar").addEventListener("click", () => {
-    const nombreTarjeta = document.getElementById("nombreTarjeta").value;
-    const numeroTarjeta = document.getElementById("numeroTarjeta").value;
-    const fechaVencimiento = document.getElementById("fechaVencimiento").value;
-    const cvv = document.getElementById("cvv").value;
 
-    if (!nombreTarjeta || !numeroTarjeta || !fechaVencimiento || !cvv) {
-        alert("Por favor completa todos los campos.");
+document.getElementById('nombreTarjeta').addEventListener('input', e => {
+    svgNombre.textContent = e.target.value.toUpperCase() || 'NOMBRE COMPLETO';
+});
+
+document.getElementById('fechaVencimiento').addEventListener('input', e => {
+    let valor = e.target.value.replace(/\D/g, '');
+    if (valor.length > 2) valor = valor.slice(0, 2) + '/' + valor.slice(2);
+    e.target.value = valor;
+    svgFecha.textContent = valor || 'MM/AA';
+});
+
+
+document.getElementById('cvv').addEventListener('focus', () => {
+    tarjeta.classList.add('show-back');
+});
+
+document.getElementById('cvv').addEventListener('blur', () => {
+    tarjeta.classList.remove('show-back');
+});
+
+document.getElementById('cvv').addEventListener('input', e => {
+    const valor = e.target.value.replace(/\D/g, '').slice(0, 3);
+    e.target.value = valor;
+    vistaCVV.textContent = valor || 'CVV';
+});
+
+function validarLuhn(numero) {
+    const arr = numero.replace(/\s/g, '').split('').reverse().map(n => parseInt(n));
+    let suma = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let n = arr[i];
+        if (i % 2 !== 0) {
+            n *= 2;
+            if (n > 9) n -= 9;
+        }
+        suma += n;
+    }
+    return suma % 10 === 0;
+}
+
+document.getElementById('btnFinalizar').addEventListener('click', () => {
+    const numero = document.getElementById('numeroTarjeta').value;
+    const nombre = document.getElementById('nombreTarjeta').value;
+    const fecha = document.getElementById('fechaVencimiento').value;
+    const cvv = document.getElementById('cvv').value;
+
+    if (!validarLuhn(numero)) {
+        alert('Número de tarjeta inválido.');
         return;
     }
-
-    const usuario = JSON.parse(localStorage.getItem("usuario"));
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    const total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
-
-    enviarFactura(usuario.email, carrito, total);
-
-    alert("¡Compra finalizada con éxito! Se ha enviado una factura a tu correo.");
-    localStorage.removeItem("carrito");
-    window.location.href = "index.html";
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const btnContinuar = document.getElementById("btnContinuar");
-    const modalTarjeta = document.getElementById("modalTarjeta");
-    const btnFinalizar = document.getElementById("btnFinalizar");
+const modalTarjeta = document.getElementById('modalTarjeta');
+const modalExito = document.getElementById('modalExito');
+const btnContinuar = document.getElementById('btnContinuar');
+const btnFinalizar = document.getElementById('btnFinalizar');
+const cerrarModal = document.getElementById('cerrarModal');
 
-    btnContinuar.addEventListener("click", function () {
-        modalTarjeta.style.display = "block";
-    });
+btnContinuar.addEventListener('click', () => {
+  modalTarjeta.style.display = 'block';
+});
 
-    btnFinalizar.addEventListener("click", function () {
-        const nombre = document.getElementById("nombreTarjeta").value;
-        const numero = document.getElementById("numeroTarjeta").value;
-        const fecha = document.getElementById("fechaVencimiento").value;
-        const cvv = document.getElementById("cvv").value;
+cerrarModal.addEventListener('click', () => {
+  modalTarjeta.style.display = 'none';
+});
 
-        if (!nombre || !numero || !fecha || !cvv) {
-            alert("Por favor complete todos los campos de la tarjeta.");
-            return;
-        }
-
-        alert("✅ ¡Pago realizado con éxito! La factura será enviada a su correo electrónico.");
-
-        enviarFacturaPorCorreo();
-
-        modalTarjeta.style.display = "none";
-    });
-
-    function enviarFacturaPorCorreo() {
-        console.log("Factura enviada al correo del cliente (simulado)");
+btnFinalizar.addEventListener('click', () => {
+    const numero = document.getElementById('numeroTarjeta').value;
+    
+    if (!validarLuhn(numero)) {
+      alert('Número de tarjeta inválido.');
+      return;
     }
-});
+
+    localStorage.removeItem('carrito');
+  
+    document.getElementById('listaProductos').innerHTML = '';
+
+    modalTarjeta.style.display = 'none';
+    modalExito.style.display = 'block';
+  
+    setTimeout(() => {
+      modalExito.style.display = 'none';
+      window.location.href = 'index.html'; 
+    }, 3000);
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const sesionIniciada = localStorage.getItem("sesionIniciada");
+  
+    document.getElementById("btnContinuar").addEventListener("click", () => {
+      if (sesionIniciada !== "true") {
+        alert("Debes iniciar sesión para continuar con la compra.");
+        window.location.href = "Login.html"; 
+      } else {
+        document.querySelector(".card-container").style.display = "block";
+      }
+    });
+  });
+  
