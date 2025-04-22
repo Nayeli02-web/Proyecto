@@ -130,6 +130,19 @@
             <p class="footer-rights">© 2025, Derechos Reservados por: <br> Nayeli Arrieta Castro</p>
         </footer>
 
+        <div id="carrito-container" class="carrito-container" style="display: none;">
+            <div class="carrito-header">
+                <h3>Mi Carrito</h3>
+                <button onclick="cerrarCarrito()">✕</button>
+            </div>
+            <div id="carrito-items"></div>
+            <div class="carrito-footer">
+                <p>Total: <span id="carrito-total">₡0</span></p>
+                <button id="btnProcederCompra" class="btn-proceder-compra w-100 mt-2">Proceder a la Compra</button>
+            </div>
+        </div>        
+        <script src="js/carrito.js"></script>
+        
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
