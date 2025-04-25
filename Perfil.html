@@ -1,181 +1,171 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Perfil</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="css/Perfil.css">
-    </head>
+<head>
+  <title>Perfil</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid d-flex align-items-center justify-content-between">
-             
-                    <div class="d-flex align-items-center">
-                        <a class="navbar-brand me-4" href="#"> 
-                            <img src="Imagenes/Flor Eterna.png" alt="Flor Eterna Hilda">
-                        </a>
-            
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav d-flex flex-row flex-wrap align-items-center">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Productos.html">Productos y Servicios</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
-                                <li class="nav-item"><a class="nav-link" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Autor.html">Acerca De</a></li>
-                            </ul>
-                        </div>
-                    </div>
-            
-                    <div class="iconos-navbar d-flex align-items-center gap-3 me-3" id="navIcons">
-                        <a href="Login.html"><img src="Imagenes/login.png" alt="Usuario" class="icono-navbar"></a>
-                        <a href="#" id="abrir-carrito"><img src="Imagenes/carrito.png" alt="Carrito" class="icono-navbar"></a>
-                    </div>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/Perfil.css">
+</head>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-            </nav>
-            
-            <script src="js/navegadorperfil.js"></script>
-        </header>
-        
-        <img src="Imagenes/fondo1.jpg" alt="Fondo" class="fondo-imagen" />
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
 
-        <div class="contenedor">
-            <h4>Información de la Cuenta</h4>
-            <form>
-              <div class="mb-3">
-                <label>Correo:</label>
-                <input type="email" id="correo" class="form-control" disabled>
-              </div>
-              <div class="mb-3">
-                <label>Nombre:</label>
-                <input type="text" id="nombre" class="form-control" disabled>
-              </div>
-              <div class="mb-3">
-                <label>Apellidos:</label>
-                <input type="text" id="apellidos" class="form-control" disabled>
-              </div>
-              <div class="mb-3">
-                <label>Teléfono:</label>
-                <input type="tel" id="telefono" class="form-control" placeholder="Ingrese su teléfono">
-              </div>
-        </div>
-        
-        <div class="contenedor">
-              <h4>Información de Envío</h4>
-              <div class="mb-3">
-                <label>Correo:</label>
-                <input type="email" id="envioCorreo" class="form-control" disabled>
-              </div>
-              <div class="mb-3">
-                <label>Nombre:</label>
-                <input type="text" id="envioNombre" class="form-control" disabled>
-              </div>
-              <div class="mb-3">
-                <label>Apellidos:</label>
-                <input type="text" id="envioApellidos" class="form-control" disabled>
-              </div>
-              <div class="mb-3">
-                <label>Dirección Exacta:</label>
-                <textarea id="direccion" class="form-control"></textarea>
-              </div>
-              <div class="mb-3">
-                <label>Provincia:</label>
-                <select id="provincia" class="form-select">
-                  <option value="">Seleccione provincia</option>
-                  <option>San José</option>
-                  <option>Alajuela</option>
-                  <option>Cartago</option>
-                  <option>Heredia</option>
-                  <option>Guanacaste</option>
-                  <option>Puntarenas</option>
-                  <option>Limón</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label>Cantón:</label>
-                <select id="canton" class="form-select">
-                  <option value="">Seleccione cantón</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label>Distrito:</label>
-                <select id="distrito" class="form-select">
-                  <option value="">Seleccione distrito</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label>Código Postal:</label>
-                <input type="text" id="codigoPostal" class="form-control">
-              </div>
-            </form>
+        <a class="navbar-brand" href="#">
+          <img src="Imagenes/Flor Eterna.png" alt="Flor Eterna Hilda">
+        </a>
 
-                <button id="btnGuardarPerfil">Guardar Información</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <script src="js/perfil.js"></script>
-              
-        </div>
-        
-        <footer class="footer">
-            <div class="footer-container">
-                <span class="footer-text">SÍGUENOS EN</span>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61559473898472" target="_blank">
-                        <img src="Imagenes/facebook.png" alt="Facebook" style="width: 40px; height: 40px; border-radius: 50%;">
-                    </a>
-                </div>
-                <span class="footer-text">ENVÍANOS UN WHATSAPP</span>
-                <div class="social-icons">
-                    <a href="https://wa.me/50686286611" target="_blank">
-                    <img src="Imagenes/whatsapp.png" alt="WhatsApp" style="width: 40px; height: 40px; border-radius: 50%;">
-                </a>
-                </div>
-                
-            </div>
-            <p class="footer-rights">© 2025, Derechos Reservados por: <br> Nayeli Arrieta Castro</p>
-        </footer>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav d-flex flex-row flex-wrap align-items-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="Productos.html">Productos y Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a class="nav-link" href="Autor.html">Acerca De</a></li>
+          </ul>
 
-        <div id="carrito-container" class="carrito-container" style="display: none;">
-          <div class="carrito-header">
-              <h3>Mi Carrito</h3>
-              <button onclick="cerrarCarrito()">✕</button>
+          <div class="iconos-navbar d-flex align-items-center gap-3 ms-auto" id="navIcons">
+            <a href="Login.html"><img src="Imagenes/login.png" alt="Usuario" class="icono-navbar"></a>
+            <a href="#" id="abrir-carrito"><img src="Imagenes/carrito.png" alt="Carrito" class="icono-navbar"></a>
           </div>
-          <div id="carrito-items"></div>
-          <div class="carrito-footer">
-              <p>Total: <span id="carrito-total">₡0</span></p>
-              <button id="btnProcederCompra" class="btn-proceder-compra w-100 mt-2">Proceder a la Compra</button>
-          </div>
-      </div>        
-      <script src="js/carrito.js"></script>
+        </div>
 
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+      </div>
+    </nav>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <script src="js/navegadorperfil.js"></script>
+  </header>
+
+  <img src="Imagenes/fondo1.jpg" alt="Fondo" class="fondo-imagen" />
+
+  <div class="contenedor">
+    <h4>Información de la Cuenta</h4>
+    <form>
+      <div class="mb-3">
+        <label>Correo:</label>
+        <input type="email" id="correo" class="form-control" disabled>
+      </div>
+      <div class="mb-3">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" class="form-control" disabled>
+      </div>
+      <div class="mb-3">
+        <label>Apellidos:</label>
+        <input type="text" id="apellidos" class="form-control" disabled>
+      </div>
+      <div class="mb-3">
+        <label>Teléfono:</label>
+        <input type="tel" id="telefono" class="form-control" placeholder="Ingrese su teléfono">
+      </div>
+  </div>
+
+  <div class="contenedor">
+    <h4>Información de Envío</h4>
+    <div class="mb-3">
+      <label>Correo:</label>
+      <input type="email" id="envioCorreo" class="form-control" disabled>
+    </div>
+    <div class="mb-3">
+      <label>Nombre:</label>
+      <input type="text" id="envioNombre" class="form-control" disabled>
+    </div>
+    <div class="mb-3">
+      <label>Apellidos:</label>
+      <input type="text" id="envioApellidos" class="form-control" disabled>
+    </div>
+    <div class="mb-3">
+      <label>Dirección Exacta:</label>
+      <textarea id="direccion" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+      <label>Provincia:</label>
+      <select id="provincia" class="form-select">
+        <option value="">Seleccione provincia</option>
+        <option>San José</option>
+        <option>Alajuela</option>
+        <option>Cartago</option>
+        <option>Heredia</option>
+        <option>Guanacaste</option>
+        <option>Puntarenas</option>
+        <option>Limón</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label>Cantón:</label>
+      <select id="canton" class="form-select">
+        <option value="">Seleccione cantón</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label>Distrito:</label>
+      <select id="distrito" class="form-select">
+        <option value="">Seleccione distrito</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label>Código Postal:</label>
+      <input type="text" id="codigoPostal" class="form-control">
+    </div>
+    </form>
+
+    <button id="btnGuardarPerfil">Guardar Información</button>
+
+    <script src="js/perfil.js"></script>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <span class="footer-text">SÍGUENOS EN</span>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61559473898472" target="_blank">
+          <img src="Imagenes/facebook.png" alt="Facebook" style="width: 40px; height: 40px; border-radius: 50%;">
+        </a>
+      </div>
+      <span class="footer-text">ENVÍANOS UN WHATSAPP</span>
+      <div class="social-icons">
+        <a href="https://wa.me/50686286611" target="_blank">
+          <img src="Imagenes/whatsapp.png" alt="WhatsApp" style="width: 40px; height: 40px; border-radius: 50%;">
+        </a>
+      </div>
+
+    </div>
+    <p class="footer-rights">© 2025, Derechos Reservados por: <br> Nayeli Arrieta Castro</p>
+  </footer>
+
+  <div id="carrito-container" class="carrito-container" style="display: none;">
+    <div class="carrito-header">
+      <h3>Mi Carrito</h3>
+      <button onclick="cerrarCarrito()">✕</button>
+    </div>
+    <div id="carrito-items"></div>
+    <div class="carrito-footer">
+      <p>Total: <span id="carrito-total">₡0</span></p>
+      <button id="btnProcederCompra" class="btn-proceder-compra w-100 mt-2">Proceder a la Compra</button>
+    </div>
+  </div>
+  <script src="js/carrito.js"></script>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

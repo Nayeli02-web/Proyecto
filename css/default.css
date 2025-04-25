@@ -19,11 +19,6 @@ body {
     width: auto;
 }
 
-.navbar-nav {
-    display: flex;
-    gap: 20px;
-}
-
 .navbar-nav .nav-link {
     color: #A12439;
     font-weight: 500;
@@ -49,27 +44,40 @@ body {
     transform: scale(1.1);
 }
 
-@media (max-width: 991px) {
-    .iconos-navbar {
-        margin-top: 10px;
-        justify-content: center;
-        width: 100%;
-        padding: 20px;
+.navbar-toggler {
+    background-color: #f8c3d3;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .container-fluid {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .navbar-nav {
-        width: 100%;
-        justify-content: center;
+    .navbar-brand {
+        margin-bottom: 10px;
     }
 
     .navbar-collapse {
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
 
-    .container-fluid {
+    .navbar-nav {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .iconos-navbar {
+        margin-top: 20px;
+        justify-content: center;
+        width: 100%;
     }
 }
 
@@ -229,6 +237,13 @@ section p {
     color: white;
 }
 
+@media (min-width: 767px) {
+    .boton {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
 /* Footer limpio */
 .footer {
     background-color: #FCEFF3;
@@ -327,3 +342,17 @@ section p {
 .btn-proceder-compra:hover {
     background-color: #ec407a;
 }
+
+.btn-custom {
+    background-color: #F9C4D2;
+    border: none;
+    color: black;
+}
+
+@media (min-width: 767px) {
+    .btn-custom {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
