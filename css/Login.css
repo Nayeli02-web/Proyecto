@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 /* Navbar */
 .navbar {
   background-color: #FCEFF3;
@@ -53,31 +54,31 @@ body {
 
 @media (max-width: 767px) {
   .container-fluid {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navbar-brand {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   .navbar-collapse {
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 
   .navbar-nav {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
   }
 
   .iconos-navbar {
-      margin-top: 20px;
-      justify-content: center;
-      width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -231,19 +232,31 @@ button {
   margin-top: 5px;
 }
 
-#carrito-container {
-  position: fixed;
-  top: 20px;
-  right: 0;
+.carrito-container {
+  position: absolute;
+  right: 20px;
+  top: 70px;
   width: 350px;
-  max-height: 90vh;
-  overflow-y: auto;
-  background-color: #fff6f7;
-  border-left: 2px solid #ccc;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  display: none;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   padding: 20px;
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  .carrito-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 0;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 9999;
+  }
 }
 
 .btn-proceder-compra {
@@ -256,5 +269,5 @@ button {
 }
 
 .btn-proceder-compra:hover {
-  background-color: #ec407a; 
+  background-color: #ec407a;
 }
