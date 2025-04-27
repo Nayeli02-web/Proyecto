@@ -103,50 +103,6 @@
         </div>
     </div>
 
-    <!-- Modal de mensaje para llenar formulario -->
-    <div id="modalFormularioMensaje" class="modal">
-        <div class="modal-contenido">
-            <h4>Llena el formulario para completar tu registro</h4>
-            <button id="btnAbrirFormulario" class="btn btn-primary">Aceptar</button>
-        </div>
-    </div>
-
-    <!-- Modal del formulario -->
-    <div id="modalFormulario" class="modal">
-        <div class="modal-contenido">
-            <h4>Formulario de Registro</h4>
-            <form id="formRegistro">
-                <input type="email" name="email" placeholder="Correo electrónico" required><br>
-                <input type="text" name="nombreCompleto" placeholder="Nombre completo" required><br>
-                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required><br>
-                <input type="number" name="rangoIngreso" placeholder="Rango de ingreso mensual" required><br>
-
-                <input type="hidden" id="edad" name="edad">
-
-                <div>
-                    <label>Género:</label><br>
-                    <input type="radio" name="genero" value="Femenino" required> Femenino
-                    <input type="radio" name="genero" value="Masculino"> Masculino
-                    <input type="radio" name="genero" value="Otro"> Otro
-                </div>
-
-                <div>
-                    <label>Grado Académico:</label><br>
-                    <select name="gradoAcademico" multiple required>
-                        <option value="Primaria">Primaria</option>
-                        <option value="Secundaria">Secundaria</option>
-                        <option value="Técnico">Técnico</option>
-                        <option value="Universitario">Universitario</option>
-                        <option value="Postgrado">Postgrado</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn btn-success mt-3">Enviar</button>
-            </form>
-        </div>
-    </div>
-
-
     <script src="js/compra.js"></script>
 
     <footer class="footer">
