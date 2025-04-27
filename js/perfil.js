@@ -102,6 +102,52 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     localStorage.setItem("perfilUsuario", JSON.stringify(datosPerfil));
-    alert("Información guardada correctamente.");
   });
+});
+
+function calcularEdad() {
+  const fechaNacimiento = document.getElementById('fechaNacimiento').value;
+  if (fechaNacimiento) {
+    const hoy = new Date();
+    const nacimiento = new Date(fechaNacimiento);
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    const mes = hoy.getMonth() - nacimiento.getMonth();
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+      edad--;
+    }
+    document.getElementById('edad').value = edad;
+  } else {
+    document.getElementById('edad').value = '';
+  }
+}
+document.getElementById('btnGuardarPerfil').addEventListener('click', function() {
+  const nombre = document.getElementById('nombre').value;
+  const apellidos = document.getElementById('apellidos').value;
+  const telefono = document.getElementById('telefono').value;
+  const fechaNacimiento = document.getElementById('fechaNacimiento').value;
+  const edad = document.getElementById('edad').value;
+  const rangoIngreso = document.getElementById('rangoIngreso').value;
+  const genero = document.getElementById('genero').value;
+  const gradoAcademico = document.getElementById('gradoAcademico').value;
+
+  const templateParams = {
+    nombre: nombre,
+    apellidos: apellidos,
+    telefono: telefono,
+    fecha_nacimiento: fechaNacimiento,
+    edad: edad,
+    rango_ingreso: rangoIngreso,
+    genero: genero,
+    grado_academico: gradoAcademico
+  };
+  
+  emailjs.send('FRhXKtESUVLL2iQsM', 'template_edl3rsa', templateParams)
+    .then(function(response) {
+      console.log('Correo enviado exitosamente!', response.status, response.text);
+      alert('Información guardada y enviada exitosamente.');
+    }, function(error) {
+      console.error('Error al enviar el correo:', error);
+      alert('Ocurrió un error al enviar la información.');
+    });
+  
 });
