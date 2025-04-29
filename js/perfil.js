@@ -148,6 +148,8 @@ document.getElementById('btnGuardarPerfil').addEventListener('click', function()
     .then(function(response) {
       console.log('Correo enviado exitosamente!', response.status, response.text);
       alert('Información guardada y enviada exitosamente.');
+
+      window.location.href = 'Productos.html';
     }, function(error) {
       console.error('Error al enviar el correo:', error);
       alert('Ocurrió un error al enviar la información.');
