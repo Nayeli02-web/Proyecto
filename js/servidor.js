@@ -21,7 +21,7 @@ app.post('/enviar-factura', async (req, res) => {
         const { nombre, email, telefono, direccion, carrito, total } = req.body;
 
         const htmlFactura = `
-            <h2>Factura de Compra</h2>
+            <h2>Detalles de la Compra</h2>
             <p><strong>Nombre:</strong> ${nombre}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Teléfono:</strong> ${telefono}</p>
@@ -36,11 +36,11 @@ app.post('/enviar-factura', async (req, res) => {
         await transporter.sendMail({
             from: 'Flor Eterna <nayeliarrieta02@gmail.com>',
             to: email,
-            subject: 'Factura de tu compra en Flor Eterna',
+            subject: 'Detalle de tu compra en Flor Eterna',
             html: htmlFactura
         });
 
-        res.status(200).json({ message: 'Factura enviada correctamente' });
+        res.status(200).json({ message: 'detalle de la compra enviada correctamente' });
     } catch (error) {
         console.error('Error al enviar la factura:', error);
         res.status(500).json({ message: 'Error al enviar la factura', error: error.message });
