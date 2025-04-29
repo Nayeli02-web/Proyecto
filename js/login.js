@@ -29,7 +29,7 @@ function registrar() {
   
     localStorage.setItem("usuario", JSON.stringify(user));
     alert("¡Cuenta creada con éxito!");
-    window.location.href = "login.html";
+    window.location.href = "Login.html";
   }
   
   // Iniciar sesión
@@ -48,7 +48,7 @@ function registrar() {
     if (storedUser.email === email && storedUser.password === password) {
       alert("¡Inicio de sesión exitoso!");
       localStorage.setItem("sesionIniciada", "true");
-      window.location.href = "perfil.html";
+      window.location.href = "Perfil.html";
     } else {
       error.textContent = "Email o contraseña incorrectos.";
     }
