@@ -78,9 +78,33 @@ document.getElementById('nombreTarjeta').addEventListener('input', e => {
 
 document.getElementById('fechaVencimiento').addEventListener('input', e => {
     let valor = e.target.value.replace(/\D/g, '');
-    if (valor.length > 2) valor = valor.slice(0, 2) + '/' + valor.slice(2);
+
+    if (valor.length > 2) {
+        valor = valor.slice(0, 2) + '/' + valor.slice(2);
+    }
+
     e.target.value = valor;
     svgFecha.textContent = valor || 'MM/AA';
+
+  
+    if (valor.length === 5) { 
+        const partes = valor.split('/');
+        const mes = parseInt(partes[0], 10);
+        const anio = parseInt('20' + partes[1], 10); 
+
+        const hoy = new Date();
+        const anioActual = hoy.getFullYear();
+
+        if (anio <= anioActual) {
+            alert('La fecha de vencimiento debe ser mayor al año actual.');
+            e.target.value = '';
+            svgFecha.textContent = 'MM/AA';
+        } else if (mes < 1 || mes > 12) {
+            alert('El mes debe estar entre 01 y 12.');
+            e.target.value = '';
+            svgFecha.textContent = 'MM/AA';
+        }
+    }
 });
 
 
@@ -131,8 +155,16 @@ const btnFinalizar = document.getElementById('btnFinalizar');
 const cerrarModal = document.getElementById('cerrarModal');
 
 btnContinuar.addEventListener('click', () => {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    if (carrito.length === 0) {
+        alert('Tu carrito está vacío. Agrega productos antes de continuar con la compra.');
+        return;
+    }
+
     modalTarjeta.style.display = 'block';
 });
+
 
 cerrarModal.addEventListener('click', () => {
     modalTarjeta.style.display = 'none';
@@ -167,7 +199,7 @@ btnFinalizar.addEventListener('click', () => {
         })
     })
 
-
+    .then(response => response.json())
         .then(data => {
             console.log(data.message);
 
@@ -178,10 +210,9 @@ btnFinalizar.addEventListener('click', () => {
 
             setTimeout(() => {
                 modalExito.style.display = 'none';
-                modalFormularioMensaje.show();
-            }, 1500);
+                window.location.href = 'index.html';
+            }, 3000);
         })
-
         .catch(error => {
             console.error('Error al enviar correo:', error);
             alert('Ocurrió un error al enviar la factura por correo.');

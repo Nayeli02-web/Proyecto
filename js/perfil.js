@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  localStorage.removeItem("perfilUsuario");
+
   document.getElementById("correo").value = user.email;
   document.getElementById("nombre").value = user.nombre;
   document.getElementById("apellidos").value = user.apellidos;
@@ -15,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("envioNombre").value = user.nombre;
   document.getElementById("envioApellidos").value = user.apellidos;
 });
+
 
 const provinciaSelect = document.getElementById("provincia");
 const cantonSelect = document.getElementById("canton");
